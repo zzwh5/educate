@@ -7,7 +7,7 @@
       header
     </a-layout-header>
     <a-layout-content class="content" :style="{ 'padding-top': '9.2rem' }">
-      <div class="">content</div>
+      <router-view></router-view>
     </a-layout-content>
     <a-layout-footer class="footer" :style="{ textAlign: 'center' }">
       footer

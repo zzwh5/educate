@@ -10,16 +10,22 @@ const routes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/home',
+    redirect: '/teaching-system',
     meta: { hasChildren: false, title: '' },
     children: [
       {
-        path: 'home',
-        name: 'Home',
+        path: 'teaching-system',
+        name: 'TeachingSystem',
         component: Home,
         meta: { title: '首页' }
       }
     ]
+  },
+  {
+    path: '/user',
+    component: () =>
+      import(/* webpackChunkName: "about" */ '../views/login/login.vue'),
+    meta: { hasChildren: false, title: '登录' }
   },
   {
     path: '/about',
